@@ -1,16 +1,17 @@
-package builder;
+package builder.builders;
+import builder.Robot;
 
-public abstract class RobotBuilder implements Builder<Robot> {
+public abstract class RobotBuilder extends Builder<Robot> {
 
     protected Robot mRobot;
 
     @Override
-    public Robot createObject() {
+    protected Robot createObject() {
         return mRobot = new Robot();
     }
 
     @Override
-    public Robot getObject() {
+    protected Robot getObject() {
         return mRobot;
     }
 
@@ -18,4 +19,5 @@ public abstract class RobotBuilder implements Builder<Robot> {
     public abstract RobotBuilder buildArms(int arms);
     public abstract RobotBuilder buildBody(String body);
     public abstract RobotBuilder buildHead(String head);
+    public abstract Robot build();
 }

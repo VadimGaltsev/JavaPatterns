@@ -1,4 +1,6 @@
-package builder;
+package builder.builders;
+
+import builder.Robot;
 
 public class RobotDirector {
 

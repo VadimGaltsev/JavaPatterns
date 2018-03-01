@@ -1,7 +1,8 @@
-package builder;
+package builder.builders;
+
+import builder.Robot;
 
 public class SimpleRobotBuilder extends RobotBuilder {
-
 
     @Override
     public SimpleRobotBuilder buildLegs(int legs) {
@@ -26,4 +27,9 @@ public class SimpleRobotBuilder extends RobotBuilder {
         mRobot.setHead(head);
         return this;
     }
+    @Override
+    public Robot build() {
+        return mRobot;
+    }
+
 }
