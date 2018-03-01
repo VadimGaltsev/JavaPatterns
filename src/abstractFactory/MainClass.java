@@ -11,10 +11,10 @@ public class MainClass {
         AirRobot hardAirRobot = airRobotFactory.createHardRobot();
         GroundRobot easyGroundRobot = groundRobotFactory.createEasyRobot();
         GroundRobot hardGroundRobot = groundRobotFactory.createHardRobot();
-        System.out.printf("Robots created: %s1N, with body: %s2N \n", easyAirRobot, easyAirRobot.getBody());
-        System.out.printf("Robots created: %s1N, with body: %s2N \n", hardAirRobot, hardAirRobot.getBody());
-        System.out.printf("Robots created: %s1N, with body: %s2N \n", easyGroundRobot, easyGroundRobot.getBody());
-        System.out.printf("Robots created: %s1N, with body: %s2N \n", easyGroundRobot, hardGroundRobot.getBody());
+        System.out.printf("Robots created: %1$s, with body: %2$s \n", easyAirRobot, easyAirRobot.getBody());
+        System.out.printf("Robots created: %1$s, with body: %2$s \n", hardAirRobot, hardAirRobot.getBody());
+        System.out.printf("Robots created: %1$s, with body: %2$s \n", easyGroundRobot, easyGroundRobot.getBody());
+        System.out.printf("Robots created: %1$s, with body: %2$s \n", easyGroundRobot, hardGroundRobot.getBody());
 
 
     }
