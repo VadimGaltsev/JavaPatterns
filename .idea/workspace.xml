@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ae1e0a9-8858-4cdf-8c44-93735f272a68" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/adapter/MainClass.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/adapter/adaptee/Adapter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/adapter/adaptee/Window.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/adapter/adapteeSecond/AdapterSecond.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/adapter/adapteeSecond/AirRobotActions.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/adapter/adapteeSecond/RobotActions.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/adapter/adapteeSecond/RobotAir.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/adapter/adapteeSecond/RobotGround.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/singleton/Singleton.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/singleton/SingletonEnum.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/singleton/SingletonSimple.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="6ae1e0a9-8858-4cdf-8c44-93735f272a68" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
