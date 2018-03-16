@@ -3,7 +3,7 @@ import builder.Robot;
 
 public abstract class RobotBuilder extends Builder<Robot> {
 
-    protected Robot mRobot;
+    Robot mRobot;
 
     @Override
     protected Robot createObject() {

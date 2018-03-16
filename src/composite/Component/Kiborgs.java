@@ -1,6 +1,7 @@
 package composite.Component;
 
 public class Kiborgs extends Squad {
+
     public Kiborgs(String string) {
         super(string);
     }
