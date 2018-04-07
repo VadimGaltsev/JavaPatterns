@@ -17,12 +17,14 @@ public class MainFlyClass {
         System.out.println(ship1.get_Index());
         Ship ship3 = ship1.first(context).getCurrent();
         System.out.println(ship3.get_Index() + " " + Arrays.toString(ship3.setCurrent(context).getCoordinates()));
-        ship1 = ship1.next(context).getCurrent();
-        System.out.println(ship1.get_Index() + " " + Arrays.toString(ship1.getContext(context).getCoordinates()));
+        ship2 = ship1.next(context).getCurrent();
+        System.out.println(ship2.get_Index() + " " + Arrays.toString(ship2.getContext(context).getCoordinates()));
         ship2 = ship1.next(context).getCurrent();
         System.out.println(ship2.get_Index());
         ship2 = ship1.next(context).getCurrent();
         System.out.println(ship2.get_Index());
+        System.out.println(ship2.get_Index() + " " + Arrays.toString(ship2.getContext(context).getCoordinates()));
+
 
     }
 }
