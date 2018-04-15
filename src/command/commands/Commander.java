@@ -13,7 +13,7 @@ public class Commander<T extends Receiver> extends Command {
 
     @Override
     public void execute() {
-        _Commands.add(new Commander<T>((T)_Receiver.startThread()));
+        _Commands.add(new Commander<>((T)_Receiver.startThread()));
     }
 
     @Override
