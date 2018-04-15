@@ -42,7 +42,7 @@ public class Node extends AbstractGraph {
             private int _position = 0;
             private boolean _firstCall = true;
             private AbstractGraph last = Node.this;
-            private Queue<AbstractGraph> _graphQeue = new LinkedBlockingQueue<>();
+            private Queue<AbstractGraph> _graphQueue = new LinkedBlockingQueue<>();
             @Override
             public String next() {
                 if (_firstCall) {
@@ -53,21 +53,21 @@ public class Node extends AbstractGraph {
                          String next = last._childs[_position].get_name();
                          AbstractGraph abstractGraph = last._childs[_position];
                          if (abstractGraph._childs != null) {
-                             _graphQeue.add(abstractGraph);
+                             _graphQueue.add(abstractGraph);
                          }
                          _position++;
                          return next;
                     } else {
                         int len = last._childs.length;
                         _position = _position % len;
-                        last = _graphQeue.poll();
+                        last = _graphQueue.poll();
                         return next();
                     }
                 }
             }
             @Override
             public boolean whileNext() {
-                if (_position < last._childs.length || _graphQeue.size() > 0)
+                if (_position < last._childs.length || _graphQueue.size() > 0)
                 return true;
                 else return false;
             }
