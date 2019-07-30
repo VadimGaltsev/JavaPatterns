@@ -1,30 +1,18 @@
 package flyweight;
 
-import flyweight.flyweightFactory.Ship;
-import flyweight.flyweightFactory.ShipContext;
-import flyweight.flyweightFactory.ShipFactory;
-
-import java.util.Arrays;
-
 public class MainFlyClass {
 
     public static void main(String[] args) {
-        ShipContext context = new ShipContext();
-        ShipFactory shipFactory = new ShipFactory(context);
-        shipFactory.create(4);
-        Ship ship2 = shipFactory.create(2);
-        Ship ship1 = shipFactory.create(10);
-        System.out.println(ship1.get_Index());
-        Ship ship3 = ship1.first(context).getCurrent();
-        System.out.println(ship3.get_Index() + " " + Arrays.toString(ship3.setCurrent(context).getCoordinates()));
-        ship2 = ship1.next(context).getCurrent();
-        System.out.println(ship2.get_Index() + " " + Arrays.toString(ship2.getContext(context).getCoordinates()));
-        ship2 = ship1.next(context).getCurrent();
-        System.out.println(ship2.get_Index());
-        ship2 = ship1.next(context).getCurrent();
-        System.out.println(ship2.get_Index());
-        System.out.println(ship2.get_Index() + " " + Arrays.toString(ship2.getContext(context).getCoordinates()));
-
-
+        IntegerContext littleContext = new IntegerContext();
+        IntegerContext bigContext = new IntegerContext();
+        IntegerFlyweightFactory flyweightFactory = new IntegerFlyweightFactory(littleContext);
+        IntegerFlyweight flyweight = flyweightFactory.create(1);
+        IntegerFlyweight flyweight_2 = flyweightFactory.create(1);
+        flyweight.setExternalState("Число");
+        flyweight_2.setExternalState("Chislo");
+        flyweightFactory.switchContext(bigContext);
+        flyweightFactory.create(123123);
+        flyweight.action(littleContext);
+        flyweight.action(bigContext);
     }
 }

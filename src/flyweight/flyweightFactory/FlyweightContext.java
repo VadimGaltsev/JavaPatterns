@@ -1,31 +1,20 @@
 package flyweight.flyweightFactory;
 
-import java.util.TreeSet;
+import java.util.Map;
 
-public abstract class FlyweightContext<T extends Flyweight> {
-    TreeSet<T> _TreeFlySet;
-    T _Flyweight;
-    FlyweightContext() {
-        _TreeFlySet = new TreeSet<>();
+public abstract class FlyweightContext<S, F extends Flyweight<S, ? extends FlyweightContext<S, F>>> {
+
+    protected Map<S, F> flyweights;
+
+    protected abstract F getFlyweight(S state);
+
+    protected abstract S getState(F flyWeight);
+
+    public Map<S, F> getFlyweights() {
+        return flyweights;
     }
 
-    void next() {
-        Flyweight flyweight = _TreeFlySet.higher(_Flyweight);
-        if (flyweight != null) {
-            _Flyweight = (T) flyweight;
-        } else {
-            _Flyweight = _TreeFlySet.last();
-        }
+    public void putFlyweight(S state, F flyweight) {
+        flyweights.put(state, flyweight);
     }
-
-    void remove() {
-        _TreeFlySet.remove(_Flyweight);
-    }
-
-    void first() {
-        _Flyweight = _TreeFlySet.first();
-    }
-
-    public abstract T getCurrent();
-
 }
